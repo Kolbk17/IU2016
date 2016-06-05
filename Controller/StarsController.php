@@ -1,7 +1,10 @@
 <?php
+header('Access-Control-Allow-Origin: *');
 class StarsController extends AppController {
     var $name = 'Stars';
     public $helpers = array('Html', 'Js');
+    public $components = array('RequestHandler');
+    
     public function starslist($galaxy_id = null) {
         if (!$galaxy_id) {
             throw new NotFoundException(__('Invalid Galaxy'));
@@ -25,7 +28,12 @@ class StarsController extends AppController {
     public function index() {
         $this->Star->recursive = 0;
         $stars = $this->Star->find('all', array('group' => 'Star.id'));
-        $this->set('stars', $stars);
+        //$this->set('stars', $stars);
+        $this->set(array(
+            'stars' => $stars,
+            '_serialize' => array('stars')
+        ));
+        
     }
     public function add() {
         $this->Galaxy = ClassRegistry::init('Galaxy');
