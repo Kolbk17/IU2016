@@ -1,0 +1,1897 @@
+2016-03-13 15:58:52 Error: Fatal Error (4): syntax error, unexpected ',' in [/var/www/html/cake/app/Config/database.php, line 74]
+2016-03-13 15:58:52 Error: [FatalErrorException] syntax error, unexpected ','
+Request URL: /cake/users/login
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/c...', 74)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/c...', 74, Array)
+#2 /var/www/html/cake/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/c...', 74, Array)
+#3 /var/www/html/cake/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-13 15:59:58 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'root\'@\'localhost\' (using password: NO)',
+  'enabled' => true,
+)
+Request URL: /cake/users/login
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /var/www/html/cake/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /var/www/html/cake/lib/Cake/Model/Model.php(3626): ConnectionManager::getDataSource('default')
+#3 /var/www/html/cake/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /var/www/html/cake/lib/Cake/Model/Model.php(3653): Model->setSource('users')
+#5 /var/www/html/cake/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#6 /var/www/html/cake/lib/Cake/View/Helper/FormHelper.php(215): Model->schema()
+#7 /var/www/html/cake/lib/Cake/View/Helper/FormHelper.php(479): FormHelper->_introspectModel('User', 'fields')
+#8 /var/www/html/cake/app/View/Users/login.ctp(4): FormHelper->create('User')
+#9 /var/www/html/cake/lib/Cake/View/View.php(971): include('/var/www/html/c...')
+#10 /var/www/html/cake/lib/Cake/View/View.php(933): View->_evaluate('/var/www/html/c...', Array)
+#11 /var/www/html/cake/lib/Cake/View/View.php(473): View->_render('/var/www/html/c...')
+#12 /var/www/html/cake/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#13 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#14 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#15 /var/www/html/cake/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2016-03-13 16:06:02 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'root\'@\'localhost\' (using password: NO)',
+  'enabled' => true,
+)
+Request URL: /cake/users/login
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /var/www/html/cake/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /var/www/html/cake/lib/Cake/Model/Model.php(3626): ConnectionManager::getDataSource('default')
+#3 /var/www/html/cake/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /var/www/html/cake/lib/Cake/Model/Model.php(3653): Model->setSource('users')
+#5 /var/www/html/cake/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#6 /var/www/html/cake/lib/Cake/Model/Model.php(3003): Model->_readDataSource('first', Array)
+#7 /var/www/html/cake/lib/Cake/Controller/Component/Auth/BaseAuthenticate.php(130): Model->find('first', Array)
+#8 /var/www/html/cake/lib/Cake/Controller/Component/Auth/FormAuthenticate.php(79): BaseAuthenticate->_findUser('root', 'robotsushi1')
+#9 /var/www/html/cake/lib/Cake/Controller/Component/AuthComponent.php(766): FormAuthenticate->authenticate(Object(CakeRequest), Object(CakeResponse))
+#10 /var/www/html/cake/lib/Cake/Controller/Component/AuthComponent.php(611): AuthComponent->identify(Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/html/cake/app/Controller/UsersController.php(17): AuthComponent->login()
+#12 [internal function]: UsersController->login()
+#13 /var/www/html/cake/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#14 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#15 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#16 /var/www/html/cake/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2016-03-13 16:33:44 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-13 16:39:32 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-03-13 16:39:32 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-13 16:39:49 Error: [MissingActionException] Action AppController::log-in() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'log-in',
+)
+Request URL: /cake/app/log-in/
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-03-13 16:39:49 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-13 16:45:30 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-13 16:48:19 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'root\'@\'localhost\' (using password: NO)',
+  'enabled' => true,
+)
+Request URL: /cake/users/login
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /var/www/html/cake/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /var/www/html/cake/lib/Cake/Model/Model.php(3626): ConnectionManager::getDataSource('default')
+#3 /var/www/html/cake/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /var/www/html/cake/lib/Cake/Model/Model.php(3653): Model->setSource('users')
+#5 /var/www/html/cake/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#6 /var/www/html/cake/lib/Cake/View/Helper/FormHelper.php(215): Model->schema()
+#7 /var/www/html/cake/lib/Cake/View/Helper/FormHelper.php(479): FormHelper->_introspectModel('User', 'fields')
+#8 /var/www/html/cake/app/View/Users/login.ctp(4): FormHelper->create('User')
+#9 /var/www/html/cake/lib/Cake/View/View.php(971): include('/var/www/html/c...')
+#10 /var/www/html/cake/lib/Cake/View/View.php(933): View->_evaluate('/var/www/html/c...', Array)
+#11 /var/www/html/cake/lib/Cake/View/View.php(473): View->_render('/var/www/html/c...')
+#12 /var/www/html/cake/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#13 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#14 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#15 /var/www/html/cake/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2016-03-13 16:48:19 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-13 16:48:38 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-13 16:49:26 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-13 16:59:41 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-03-13 17:05:53 Error: [MissingActionException] Action AppController::log-in() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'log-in',
+)
+Request URL: /cake/app/log-in/
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-03-13 17:06:12 Error: [MissingActionException] Action AppController::log-in() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'log-in',
+)
+Request URL: /cake/app/log-in/log-in.html
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-03-13 17:07:32 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /cake/user/index
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-13 17:07:48 Error: [MissingActionException] Action AppController::user() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'user',
+)
+Request URL: /cake/app/user/index
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-03-13 17:07:53 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /cake/user
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-13 17:07:58 Error: [MissingActionException] Action AppController::userr() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'userr',
+)
+Request URL: /cake/app/userr
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-03-13 17:08:02 Error: [MissingActionException] Action AppController::user() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'user',
+)
+Request URL: /cake/app/user
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-03-13 17:13:56 Error: [MissingControllerException] Controller class Iu-oldController could not be found.
+Exception Attributes: array (
+  'class' => 'Iu-oldController',
+  'plugin' => NULL,
+)
+Request URL: /cake/iu-old
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-13 18:39:01 Error: [MissingActionException] Action AppController::index.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'index.php',
+)
+Request URL: /cake/app/index.php
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-03-13 18:51:59 Error: [MissingActionException] Action AppController::log-in() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'log-in',
+)
+Request URL: /cake/app/log-in/log-in.html
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-03-13 19:55:10 Error: [MissingControllerException] Controller class SignupController could not be found.
+Exception Attributes: array (
+  'class' => 'SignupController',
+  'plugin' => NULL,
+)
+Request URL: /cake/signup
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-13 19:55:20 Error: [MissingControllerException] Controller class LoginController could not be found.
+Exception Attributes: array (
+  'class' => 'LoginController',
+  'plugin' => NULL,
+)
+Request URL: /cake/login
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-13 20:46:47 Error: [MissingActionException] Action UsersController::stars() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'stars',
+)
+Request URL: /cake/users/stars
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-03-13 20:47:31 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '5-1' for key 'PRIMARY'
+Request URL: /cake/Users/add
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /var/www/html/cake/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `bi...', Array)
+#2 /var/www/html/cake/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `bi...')
+#3 /var/www/html/cake/lib/Cake/Model/Model.php(1933): DboSource->create(Object(UserStarEdge), Array, Array)
+#4 /var/www/html/cake/lib/Cake/Model/Model.php(1751): Model->_doSave(NULL, Array)
+#5 /var/www/html/cake/app/Controller/UsersController.php(93): Model->save()
+#6 [internal function]: UsersController->add()
+#7 /var/www/html/cake/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /var/www/html/cake/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-05-10 03:44:55 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/test
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-10 03:45:02 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-10 18:45:36 Error: [MissingControllerException] Controller class GalaxiedController could not be found.
+Exception Attributes: array (
+  'class' => 'GalaxiedController',
+  'plugin' => NULL,
+)
+Request URL: /cake/galaxied
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-10 18:45:39 Error: [MissingTableException] Table quadrants for model Quadrant was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'quadrants',
+  'class' => 'Quadrant',
+  'ds' => 'default',
+)
+Request URL: /cake/galaxies
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Model/Model.php(3653): Model->setSource('quadrants')
+#1 /var/www/html/cake/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#2 /var/www/html/cake/lib/Cake/Model/Datasource/DboSource.php(2525): Model->schema()
+#3 /var/www/html/cake/lib/Cake/Model/Datasource/DboSource.php(1749): DboSource->fields(Object(AppModel), 'Quadrant', '')
+#4 /var/www/html/cake/lib/Cake/Model/Datasource/DboSource.php(1100): DboSource->generateAssociationQuery(Object(Galaxy), Object(AppModel), 'belongsTo', 'Quadrant', Array, Array, false)
+#5 /var/www/html/cake/lib/Cake/Model/Model.php(3031): DboSource->read(Object(Galaxy), Array)
+#6 /var/www/html/cake/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#7 /var/www/html/cake/app/Controller/GalaxiesController.php(17): Model->find('all', Array)
+#8 [internal function]: GalaxiesController->index()
+#9 /var/www/html/cake/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(GalaxiesController), Array)
+#10 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(GalaxiesController), Object(CakeRequest))
+#12 /var/www/html/cake/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2016-05-10 23:45:03 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /cake/
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-10 23:45:03 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-10 23:45:40 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'root\'@\'localhost\' (using password: NO)',
+  'enabled' => true,
+)
+Request URL: /cake/users/login
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /var/www/html/cake/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /var/www/html/cake/lib/Cake/Model/Model.php(3626): ConnectionManager::getDataSource('default')
+#3 /var/www/html/cake/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /var/www/html/cake/lib/Cake/Model/Model.php(3653): Model->setSource('users')
+#5 /var/www/html/cake/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#6 /var/www/html/cake/lib/Cake/View/Helper/FormHelper.php(215): Model->schema()
+#7 /var/www/html/cake/lib/Cake/View/Helper/FormHelper.php(479): FormHelper->_introspectModel('User', 'fields')
+#8 /var/www/html/cake/app/View/Users/login.ctp(3): FormHelper->create('User')
+#9 /var/www/html/cake/lib/Cake/View/View.php(971): include('/var/www/html/c...')
+#10 /var/www/html/cake/lib/Cake/View/View.php(933): View->_evaluate('/var/www/html/c...', Array)
+#11 /var/www/html/cake/lib/Cake/View/View.php(473): View->_render('/var/www/html/c...')
+#12 /var/www/html/cake/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
+#13 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#14 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#15 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2016-05-10 23:45:50 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /cake/
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-10 23:45:50 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-10 23:56:19 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /cake/
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-10 23:56:19 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-10 23:56:26 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /cake/
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-10 23:56:26 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-10 23:56:33 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-10 23:56:37 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /cake/
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-10 23:56:37 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-10 23:58:23 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /cake/
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-10 23:58:23 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-10 23:58:25 Error: [MissingActionException] Action AppController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'index',
+)
+Request URL: /cake/app/
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-10 23:58:25 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 00:18:51 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /cake/
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 00:18:51 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 00:19:19 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /cake/
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 00:19:19 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 00:19:22 Error: [MissingActionException] Action AppController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'index',
+)
+Request URL: /cake/app/
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 00:19:22 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 00:19:44 Error: [MissingTableException] Table user_project_edges for model UserProjectEdge was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'user_project_edges',
+  'class' => 'UserProjectEdge',
+  'ds' => 'default',
+)
+Request URL: /cake/projects
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Model/Model.php(3653): Model->setSource('user_project_ed...')
+#1 /var/www/html/cake/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#2 /var/www/html/cake/lib/Cake/Model/Datasource/DboSource.php(2525): Model->schema()
+#3 /var/www/html/cake/lib/Cake/Model/Datasource/DboSource.php(1749): DboSource->fields(Object(UserProjectEdge), 'UserProjectEdge', '')
+#4 /var/www/html/cake/lib/Cake/Model/Datasource/DboSource.php(1100): DboSource->generateAssociationQuery(Object(Project), Object(UserProjectEdge), 'hasOne', 'UserProjectEdge', Array, Array, false)
+#5 /var/www/html/cake/lib/Cake/Model/Model.php(3031): DboSource->read(Object(Project), Array)
+#6 /var/www/html/cake/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#7 /var/www/html/cake/app/Controller/ProjectsController.php(6): Model->find('all', Array)
+#8 [internal function]: ProjectsController->index()
+#9 /var/www/html/cake/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ProjectsController), Array)
+#10 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ProjectsController), Object(CakeRequest))
+#12 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2016-05-11 00:19:44 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 00:20:07 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cake/css/valeriastylesheet.css
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 00:20:07 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 00:21:01 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /cake/user
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 00:21:02 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 00:21:05 Error: [MissingControllerException] Controller class TestController could not be found.
+Exception Attributes: array (
+  'class' => 'TestController',
+  'plugin' => NULL,
+)
+Request URL: /cake/test
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 00:21:05 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 00:21:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 00:21:14 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cake/css/valeriastylesheet.css
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 00:21:18 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 00:21:55 Error: [MissingTableException] Table user_project_edges for model UserProjectEdge was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'user_project_edges',
+  'class' => 'UserProjectEdge',
+  'ds' => 'default',
+)
+Request URL: /cake/projects
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Model/Model.php(3653): Model->setSource('user_project_ed...')
+#1 /var/www/html/cake/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#2 /var/www/html/cake/lib/Cake/Model/Datasource/DboSource.php(2525): Model->schema()
+#3 /var/www/html/cake/lib/Cake/Model/Datasource/DboSource.php(1749): DboSource->fields(Object(UserProjectEdge), 'UserProjectEdge', '')
+#4 /var/www/html/cake/lib/Cake/Model/Datasource/DboSource.php(1100): DboSource->generateAssociationQuery(Object(Project), Object(UserProjectEdge), 'hasOne', 'UserProjectEdge', Array, Array, false)
+#5 /var/www/html/cake/lib/Cake/Model/Model.php(3031): DboSource->read(Object(Project), Array)
+#6 /var/www/html/cake/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#7 /var/www/html/cake/app/Controller/ProjectsController.php(6): Model->find('all', Array)
+#8 [internal function]: ProjectsController->index()
+#9 /var/www/html/cake/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ProjectsController), Array)
+#10 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ProjectsController), Object(CakeRequest))
+#12 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2016-05-11 00:21:55 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 00:22:39 Error: [MissingTableException] Table quadrants for model Quadrant was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'quadrants',
+  'class' => 'Quadrant',
+  'ds' => 'default',
+)
+Request URL: /cake/Quadrants
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Model/Model.php(3653): Model->setSource('quadrants')
+#1 /var/www/html/cake/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /var/www/html/cake/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /var/www/html/cake/app/Controller/QuadrantsController.php(6): Model->find('all', Array)
+#4 [internal function]: QuadrantsController->index()
+#5 /var/www/html/cake/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(QuadrantsController), Array)
+#6 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#7 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(QuadrantsController), Object(CakeRequest))
+#8 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2016-05-11 00:22:39 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 00:26:36 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 00:27:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 00:27:37 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 00:27:41 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 00:27:45 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 00:31:38 Error: [MissingActionException] Action AppController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'index',
+)
+Request URL: /cake/App
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 00:31:38 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 00:31:49 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /cake/
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 00:31:49 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 00:34:47 Error: [MissingActionException] Action UsersController::mainpage.html() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'mainpage.html',
+)
+Request URL: /cake/Users/mainpage.html
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 00:34:47 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 00:34:57 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 00:37:12 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 00:37:19 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 00:37:33 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 00:48:36 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /cake/
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 00:48:36 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 00:52:15 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /cake/
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 00:52:15 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 00:53:07 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /cake/
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 00:53:07 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 00:53:37 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /cake/
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 00:53:38 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 01:04:44 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /cake/
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 01:04:44 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 01:05:25 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /cake/
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 01:05:25 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 01:06:12 Error: [MissingControllerException] Controller class WebrootController could not be found.
+Exception Attributes: array (
+  'class' => 'WebrootController',
+  'plugin' => NULL,
+)
+Request URL: /cake/webroot
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 01:06:12 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 01:06:16 Error: [MissingControllerException] Controller class WebrootController could not be found.
+Exception Attributes: array (
+  'class' => 'WebrootController',
+  'plugin' => NULL,
+)
+Request URL: /cake/webroot/js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 01:06:16 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 01:13:47 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /cake/
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 01:13:47 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 01:24:11 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /cake/
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 01:24:11 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/js/jquery.js
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 01:38:36 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /cake/
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 03:16:27 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /cake/
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-11 03:28:35 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/js/jQuery.js
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:28:35 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/biostuff5.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:28:35 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/nav-back.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:28:35 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/avatar.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:28:35 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/nav_blank.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:28:35 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/nav_projects_nav2_center.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:28:35 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/nav_frame1.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:28:35 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/nav_rocket_nav2_center.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:28:35 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/nav_projects_frame3_left.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:28:35 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/nav_projects_frame3_right.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:28:35 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/opening-bar.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:28:35 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/minimap2.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:28:35 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/sources/nav_blank.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:28:35 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/buttons/search-normal.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:28:36 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/biostuff1.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:28:36 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/buttons/upload-normal.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:28:36 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/buttons/upload-hover.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:28:36 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/minimap1.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:28:36 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/background.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:28:36 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/buttons/search-hover.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:28:36 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/biostuff2.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:28:36 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/controlbar.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:30:10 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/js/jQuery.js
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:30:10 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/opening-bar.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:30:10 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/sources/nav_blank.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:30:10 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/buttons/upload-normal.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:30:10 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/buttons/upload-hover.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:30:11 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/buttons/search-hover.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:30:11 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/controlbar.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:30:11 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/buttons/search-normal.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:32:10 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/js/jQuery.js
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:32:10 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/opening-bar.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:32:10 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/controlbar.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:32:10 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/nav_blank.jpg
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:32:10 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/buttons/upload-normal.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:32:10 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/buttons/upload-hover.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:32:10 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/sources/nav_blank.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:32:10 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/buttons/search-hover.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:32:10 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/buttons/search-normal.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:32:44 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/js/jQuery.js
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:32:45 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/controlbar.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:32:45 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/sources/nav_blank.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:32:45 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/opening-bar.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:32:45 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/buttons/upload-normal.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:32:45 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/buttons/search-normal.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:32:45 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/buttons/upload-hover.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-11 03:32:45 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/img/buttons/search-hover.png
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-13 12:25:54 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /cake/
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-29 02:32:43 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /cake/
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-29 02:33:14 Error: [MissingTableException] Table quadrants for model Quadrant was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'quadrants',
+  'class' => 'Quadrant',
+  'ds' => 'default',
+)
+Request URL: /cake/galaxies
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Model/Model.php(3653): Model->setSource('quadrants')
+#1 /var/www/html/cake/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#2 /var/www/html/cake/lib/Cake/Model/Datasource/DboSource.php(2525): Model->schema()
+#3 /var/www/html/cake/lib/Cake/Model/Datasource/DboSource.php(1749): DboSource->fields(Object(AppModel), 'Quadrant', '')
+#4 /var/www/html/cake/lib/Cake/Model/Datasource/DboSource.php(1100): DboSource->generateAssociationQuery(Object(Galaxy), Object(AppModel), 'belongsTo', 'Quadrant', Array, Array, false)
+#5 /var/www/html/cake/lib/Cake/Model/Model.php(3031): DboSource->read(Object(Galaxy), Array)
+#6 /var/www/html/cake/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#7 /var/www/html/cake/app/Controller/GalaxiesController.php(17): Model->find('all', Array)
+#8 [internal function]: GalaxiesController->index()
+#9 /var/www/html/cake/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(GalaxiesController), Array)
+#10 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(GalaxiesController), Object(CakeRequest))
+#12 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2016-05-29 03:12:20 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/Quadrants
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-29 03:12:30 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/quadrants
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-29 03:12:44 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/galaxies
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-29 03:12:54 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/galaxie
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-29 03:13:19 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /cake/app/webroot/test
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-29 03:15:36 Error: [MissingActionException] Action AppController::quadrants() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'quadrants',
+)
+Request URL: /cake/app/quadrants
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-29 03:15:38 Error: [MissingActionException] Action AppController::quadrant() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'quadrant',
+)
+Request URL: /cake/app/quadrant
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-29 03:15:41 Error: [MissingActionException] Action AppController::quadrants() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'quadrants',
+)
+Request URL: /cake/app/quadrants
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-29 03:16:21 Error: [MissingActionException] Action AppController::Quadrants() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'Quadrants',
+)
+Request URL: /cake/app/Quadrants
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-05-29 03:18:33 Error: [MissingTableException] Table quadrants for model Quadrant was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'quadrants',
+  'class' => 'Quadrant',
+  'ds' => 'default',
+)
+Request URL: /cake/Quadrants
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Model/Model.php(3653): Model->setSource('quadrants')
+#1 /var/www/html/cake/lib/Cake/Model/Model.php(3031): Model->getDataSource()
+#2 /var/www/html/cake/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#3 /var/www/html/cake/app/Controller/QuadrantsController.php(6): Model->find('all', Array)
+#4 [internal function]: QuadrantsController->index()
+#5 /var/www/html/cake/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(QuadrantsController), Array)
+#6 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#7 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(QuadrantsController), Object(CakeRequest))
+#8 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2016-05-29 04:07:10 Error: [MissingTableException] Table quadrants for model Quadrant was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'quadrants',
+  'class' => 'Quadrant',
+  'ds' => 'default',
+)
+Request URL: /cake/galaxies
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Model/Model.php(3653): Model->setSource('quadrants')
+#1 /var/www/html/cake/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#2 /var/www/html/cake/lib/Cake/Model/Datasource/DboSource.php(2525): Model->schema()
+#3 /var/www/html/cake/lib/Cake/Model/Datasource/DboSource.php(1749): DboSource->fields(Object(AppModel), 'Quadrant', '')
+#4 /var/www/html/cake/lib/Cake/Model/Datasource/DboSource.php(1100): DboSource->generateAssociationQuery(Object(Galaxy), Object(AppModel), 'belongsTo', 'Quadrant', Array, Array, false)
+#5 /var/www/html/cake/lib/Cake/Model/Model.php(3031): DboSource->read(Object(Galaxy), Array)
+#6 /var/www/html/cake/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#7 /var/www/html/cake/app/Controller/GalaxiesController.php(17): Model->find('all', Array)
+#8 [internal function]: GalaxiesController->index()
+#9 /var/www/html/cake/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(GalaxiesController), Array)
+#10 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(GalaxiesController), Object(CakeRequest))
+#12 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2016-05-29 04:07:33 Error: [MissingTableException] Table quadrants for model Quadrant was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'quadrants',
+  'class' => 'Quadrant',
+  'ds' => 'default',
+)
+Request URL: /cake/Galaxies
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Model/Model.php(3653): Model->setSource('quadrants')
+#1 /var/www/html/cake/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#2 /var/www/html/cake/lib/Cake/Model/Datasource/DboSource.php(2525): Model->schema()
+#3 /var/www/html/cake/lib/Cake/Model/Datasource/DboSource.php(1749): DboSource->fields(Object(AppModel), 'Quadrant', '')
+#4 /var/www/html/cake/lib/Cake/Model/Datasource/DboSource.php(1100): DboSource->generateAssociationQuery(Object(Galaxy), Object(AppModel), 'belongsTo', 'Quadrant', Array, Array, false)
+#5 /var/www/html/cake/lib/Cake/Model/Model.php(3031): DboSource->read(Object(Galaxy), Array)
+#6 /var/www/html/cake/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#7 /var/www/html/cake/app/Controller/GalaxiesController.php(17): Model->find('all', Array)
+#8 [internal function]: GalaxiesController->index()
+#9 /var/www/html/cake/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(GalaxiesController), Array)
+#10 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(GalaxiesController), Object(CakeRequest))
+#12 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2016-05-29 04:08:06 Error: [MissingTableException] Table user_project_edges for model UserProjectEdge was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'user_project_edges',
+  'class' => 'UserProjectEdge',
+  'ds' => 'default',
+)
+Request URL: /cake/projects
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Model/Model.php(3653): Model->setSource('user_project_ed...')
+#1 /var/www/html/cake/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#2 /var/www/html/cake/lib/Cake/Model/Datasource/DboSource.php(2525): Model->schema()
+#3 /var/www/html/cake/lib/Cake/Model/Datasource/DboSource.php(1749): DboSource->fields(Object(UserProjectEdge), 'UserProjectEdge', '')
+#4 /var/www/html/cake/lib/Cake/Model/Datasource/DboSource.php(1100): DboSource->generateAssociationQuery(Object(Project), Object(UserProjectEdge), 'hasOne', 'UserProjectEdge', Array, Array, false)
+#5 /var/www/html/cake/lib/Cake/Model/Model.php(3031): DboSource->read(Object(Project), Array)
+#6 /var/www/html/cake/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#7 /var/www/html/cake/app/Controller/ProjectsController.php(6): Model->find('all', Array)
+#8 [internal function]: ProjectsController->index()
+#9 /var/www/html/cake/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ProjectsController), Array)
+#10 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ProjectsController), Object(CakeRequest))
+#12 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2016-05-29 04:08:11 Error: [MissingTableException] Table user_project_edges for model UserProjectEdge was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'user_project_edges',
+  'class' => 'UserProjectEdge',
+  'ds' => 'default',
+)
+Request URL: /cake/Projects
+Stack Trace:
+#0 /var/www/html/cake/lib/Cake/Model/Model.php(3653): Model->setSource('user_project_ed...')
+#1 /var/www/html/cake/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#2 /var/www/html/cake/lib/Cake/Model/Datasource/DboSource.php(2525): Model->schema()
+#3 /var/www/html/cake/lib/Cake/Model/Datasource/DboSource.php(1749): DboSource->fields(Object(UserProjectEdge), 'UserProjectEdge', '')
+#4 /var/www/html/cake/lib/Cake/Model/Datasource/DboSource.php(1100): DboSource->generateAssociationQuery(Object(Project), Object(UserProjectEdge), 'hasOne', 'UserProjectEdge', Array, Array, false)
+#5 /var/www/html/cake/lib/Cake/Model/Model.php(3031): DboSource->read(Object(Project), Array)
+#6 /var/www/html/cake/lib/Cake/Model/Model.php(3003): Model->_readDataSource('all', Array)
+#7 /var/www/html/cake/app/Controller/ProjectsController.php(6): Model->find('all', Array)
+#8 [internal function]: ProjectsController->index()
+#9 /var/www/html/cake/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ProjectsController), Array)
+#10 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/html/cake/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ProjectsController), Object(CakeRequest))
+#12 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2016-05-30 01:47:20 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /cake/
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-05-30 01:47:31 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /cake/
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-06-01 23:21:13 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /cake/
+Stack Trace:
+#0 /var/www/html/cake/app/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
