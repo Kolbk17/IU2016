@@ -17,7 +17,7 @@
              <?php echo $star['Star']['id']; ?>
         </td>
         <td>
-            <?php echo $star['Star']['description']; ?>
+            <?php echo $star['Star']['details]; ?>
         </td>
         <td>
         <?php echo $this->Html->link($star['Star']['galaxy_id'],
