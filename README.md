@@ -2,4 +2,4 @@
 
 Use CakePHP as REST API producer.
 
-Please read the wiki for more details
+Please read the [wiki](https://github.com/stevesuyao/IU2016/wiki) for more details.
